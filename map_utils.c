@@ -1,25 +1,16 @@
- /* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   map_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tordner <tordner@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thorgal <thorgal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 18:24:55 by tordner           #+#    #+#             */
-/*   Updated: 2025/01/15 15:01:00 by tordner          ###   ########.fr       */
+/*   Updated: 2025/01/18 18:59:21 by thorgal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
-void	print_map(t_data *data)
-{
-	printf("moves = %d\n", data->count_moves);
-	printf("collectibles left = %d\n\n", data->count_collectible);
-	for (int i = 0; data->map[i]; i++)
-		printf("%s\n", data->map[i]);
-	printf("\n");
-}
 
 int	find_player(t_data *data)
 {

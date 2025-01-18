@@ -6,7 +6,7 @@
 /*   By: thorgal <thorgal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 12:21:00 by tordner           #+#    #+#             */
-/*   Updated: 2025/01/18 17:51:05 by thorgal          ###   ########.fr       */
+/*   Updated: 2025/01/18 19:17:25 by thorgal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ typedef struct s_data
 	char	**dup_map;
 	int		i;
 	int		j;
-
 	void	*img_wall;
 	void	*img_floor;
 	void	*img_collectible;
@@ -63,9 +62,12 @@ int			exit_game(t_data *data);
 int			validate_map_reachability(t_data *data);
 void		move_up(t_data *data);
 int			find_player(t_data *data);
-void		print_map(t_data *data);
 void		flood_fill(char **map, int x, int y);
 void		draw_map(t_data *data);
+void		ft_putnbr(int n);
+void		ft_putchar(char c);
+void		count_move(t_data *data);
+void		load_images(t_data *data);
 
 
 #endif

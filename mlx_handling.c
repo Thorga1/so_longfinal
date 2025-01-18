@@ -6,13 +6,11 @@
 /*   By: thorgal <thorgal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 15:06:40 by tordner           #+#    #+#             */
-/*   Updated: 2025/01/18 17:02:02 by thorgal          ###   ########.fr       */
+/*   Updated: 2025/01/18 18:46:02 by thorgal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
-
 
 void	mlx_setup(t_data *data)
 {

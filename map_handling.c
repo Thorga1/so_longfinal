@@ -6,7 +6,7 @@
 /*   By: thorgal <thorgal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 17:34:37 by tordner           #+#    #+#             */
-/*   Updated: 2025/01/18 16:46:43 by thorgal          ###   ########.fr       */
+/*   Updated: 2025/01/18 18:46:53 by thorgal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,6 +137,5 @@ int	key_handling(int key, t_data *data)
 	else if (key == RIGHT_ARROW)
 		move_right(data);
 	draw_map(data);
-	print_map(data);
 	return (key);
 }

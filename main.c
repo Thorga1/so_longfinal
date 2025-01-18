@@ -6,7 +6,7 @@
 /*   By: thorgal <thorgal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 12:50:08 by tordner           #+#    #+#             */
-/*   Updated: 2025/01/18 16:46:22 by thorgal          ###   ########.fr       */
+/*   Updated: 2025/01/18 18:53:34 by thorgal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	free_data(t_data *data)
 
 int	exit_game(t_data *data)
 {
-	printf("moves = %d\n", data->count_moves);
+	count_move(data);
 	free_data(data);
 	exit(1);
 }
