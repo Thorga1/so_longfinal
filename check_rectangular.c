@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_rectangular.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tordner <tordner@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thorgal <thorgal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 14:06:58 by tordner           #+#    #+#             */
-/*   Updated: 2024/12/28 17:08:55 by tordner          ###   ########.fr       */
+/*   Updated: 2025/01/21 04:05:30 by thorgal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,17 +85,15 @@ int	validate_reachability(t_data *data)
 		j = 0;
 		while (data->map[i][j])
 		{
-			if (data->map[i][j] == 'C' && data->dup_map[i][j] != 'X')
-				return (write(1, "Error: Collectible unreachable\n", 31),
-					free_map(data->dup_map), 1);
-			if (data->map[i][j] == 'E' && data->dup_map[i][j] != 'X')
-				return (write(1, "Error: Exit unreachable\n", 25),
-					free_map(data->dup_map), 1);
+			if (is_collectible_reachable(data, i, j)
+				|| is_exit_reachable(data, i, j))
+				return (1);
 			j++;
 		}
 		i++;
 	}
 	free_map(data->dup_map);
+	data->dup_map = NULL;
 	return (0);
 }
 

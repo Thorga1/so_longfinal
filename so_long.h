@@ -6,7 +6,7 @@
 /*   By: thorgal <thorgal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 12:21:00 by tordner           #+#    #+#             */
-/*   Updated: 2025/01/18 19:17:25 by thorgal          ###   ########.fr       */
+/*   Updated: 2025/01/21 04:01:39 by thorgal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ void		ft_putnbr(int n);
 void		ft_putchar(char c);
 void		count_move(t_data *data);
 void		load_images(t_data *data);
-
+int			is_collectible_reachable(t_data *data, int i, int j);
+int			is_exit_reachable(t_data *data, int i, int j);
 
 #endif

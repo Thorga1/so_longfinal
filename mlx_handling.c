@@ -6,7 +6,7 @@
 /*   By: thorgal <thorgal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 15:06:40 by tordner           #+#    #+#             */
-/*   Updated: 2025/01/18 18:46:02 by thorgal          ###   ########.fr       */
+/*   Updated: 2025/01/21 04:10:38 by thorgal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 void	mlx_setup(t_data *data)
 {
+	char	*name;
+
+	name = "so long";
 	data->mlx = mlx_init();
-	data->win = mlx_new_window(data->mlx, 1000, 800, "so_long");
+	data->win = mlx_new_window(data->mlx, 1000, 800, name);
 	load_images(data);
 }

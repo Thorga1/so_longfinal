@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   setup.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tordner <tordner@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thorgal <thorgal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 13:56:04 by tordner           #+#    #+#             */
-/*   Updated: 2025/01/15 15:01:34 by tordner          ###   ########.fr       */
+/*   Updated: 2025/01/21 04:07:34 by thorgal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,17 @@ void	free_map(char **map)
 {
 	int	i;
 
+	if (!map)
+		return ;
 	i = 0;
 	while (map[i])
 	{
 		free(map[i]);
+		map[i] = NULL;
 		i++;
 	}
 	free(map);
+	map = NULL;
 }
 
 int	map_setup(t_data *data, char *file)
@@ -44,6 +48,15 @@ int	map_setup(t_data *data, char *file)
 
 int	data_setup(t_data *data, char *file)
 {
+	data->mlx = NULL;
+	data->win = NULL;
+	data->map = NULL;
+	data->dup_map = NULL;
+	data->img_wall = NULL;
+	data->img_floor = NULL;
+	data->img_collectible = NULL;
+	data->img_player = NULL;
+	data->img_exit = NULL;
 	data->count_exit = 0;
 	data->count_entrance = 0;
 	data->count_collectible = 0;
